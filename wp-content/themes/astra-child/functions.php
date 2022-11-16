@@ -29,8 +29,13 @@ function functionShortCode($params, $content = null) {
 		'param0' => '',
 		'param1' => '',
 	],$params);
-	$html = '<p>Teste ' . $a['param0'] . ' ' . $a['param1'] . ' ' . $content . '</p>';
+	$a2 = test($a['param0']);
+	$html = '<p>Teste ' . $a2 . ' ' . $a['param1'] . ' ' . $content . '</p>';
 	return $html;
+}
+
+function test($passing){
+	return $passing."aaa222";
 }
 
 add_shortcode('testeshort', 'functionShortCode');
